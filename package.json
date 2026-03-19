@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "api:gen": "orval",
+    "build": "npm run api:gen && tsc -b && vite build"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -15,6 +16,7 @@
     "@tanstack/react-table": "^8.21.3",
     "axios": "^1.13.6",
     "clsx": "^2.1.1",
+    "orval": "^8.5.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-hook-form": "^7.71.2",
