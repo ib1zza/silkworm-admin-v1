@@ -5,7 +5,7 @@ const baseURL = "https://digital-twilight.ru";
 
 const axiosInstance = axios.create({
   baseURL,
-  withCredentials: true,
+  withCredentials: false,
 });
 
 // interceptors
