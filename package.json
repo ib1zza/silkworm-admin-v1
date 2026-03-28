@@ -8,7 +8,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "api:gen": "orval",
-    "build": "npm run api:gen && tsc -b && vite build"
+    "build": "npm run api:gen && tsc -b && vite build",
+    "deploy": "powershell -ExecutionPolicy Bypass -File scripts/deploy.ps1"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

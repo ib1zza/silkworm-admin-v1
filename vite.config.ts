@@ -4,11 +4,12 @@ import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/admin/' : '/',
   plugins: [react()],
   css: {
     postcss: {
       plugins: [tailwindcss(), autoprefixer()],
     },
   },
-})
+}))
